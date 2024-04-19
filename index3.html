@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>purpose</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #yesBtn {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 20px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            background-image: url('https://hips.hearstapps.com/hmg-prod/images/heart-emoji-meanings-65c3b58d3d9ee.jpg?crop=0.111xw:0.404xh;0.114xw,0.460xh&resize=980:*');
+            background-size: cover;
+            color: black;
+        }
+        #yesBtn:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        #noBtn {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 20px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            background-image: url('/Files/broken heart.png');
+            background-size: cover;
+            color: black;
+        }
+        #noBtn:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        video {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+  <p>😈🖐️😡</p>
+  <img src="/Files/Angry.gif" height="90" alt="gif3">
+  
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+    <!-- Video player -->
+    <video id="videoPlayer" controls style="width: 100%; height: auto;" loop>
+    <source src="/Files/shut.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+</body>
+<script>
+document.getElementById("yesBtn").onclick = function() {
+    window.location.href = "yes.html";
+};
+
+document.getElementById("noBtn").onclick = function() {
+    var video = document.getElementById("videoPlayer");
+    video.style.display = "block";
+    video.play();
+    
+};
+function moveRandomEl(elm) {
+  elm.style.position = "absolute";
+  elm.style.top = Math.floor(Math.random() * 90 + 5) + "%";
+  elm.style.left = Math.floor(Math.random() * 90 + 5) + "%";
+}
+
+const moveRandom = document.querySelector("#yesBtn");
+
+moveRandom.addEventListener("mouseenter", function(e) {
+  moveRandomEl(e.target);
+});
+
+function someFunction() {
+  console.log("This is a protected function.");
+}
+
+// Obfuscated code
+var _0x2158 = ["\x54\x68\x69\x73\x20\x69\x73\x20\x61\x20\x70\x72\x6F\x74\x65\x63\x74\x65\x64\x20\x66\x75\x6E\x63\x74\x69\x6F\x6E\x2E"];
+
+function someFunction() { console.log(_0x2158[0]) };
+</script>
+</html>
